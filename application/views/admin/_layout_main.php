@@ -16,9 +16,10 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active"><a href="<?php echo site_url('admin/dashboard') ?>">Dashboard</a></li>
-          <li><?php echo anchor('admin/pages', 'pages') ?></li>
-          <li><?php echo anchor('admin/users', 'users') ?></li>
-          <li><a href="#">Link</a></li>
+          <li><?php echo anchor('admin/page', 'pages') ?></li>
+          <li><?php echo anchor('admin/page/order', 'order pages') ?></li>
+          <li><?php echo anchor('admin/article', 'news articles') ?></li>
+          <li><?php echo anchor('admin/user', 'users') ?></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>
@@ -26,9 +27,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
-          <section>
-            <h2>Page Name</h2>
-          </section>
+          <?php $this->load->view($subview); ?>
         </div>
         <div class="col-md-3">
           <aside>
